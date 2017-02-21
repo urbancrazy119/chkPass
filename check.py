@@ -1,22 +1,33 @@
 import time
+import re
+import getList
 
-now = time.localtime()
+# get check List
+lists = getList.getList()
+lists_cnt = len(lists)
+print lists_cnt
+i = 0
 
-file = open("/usr/script/chkPass/log/md5_%04d-%02d-%02d.log"%(now.tm_year, now.tm_mon, now.tm_mday),'r')
-lines = file.readlines()
-file.close()
+while i < lists_cnt:
+    chkList = re.split(r'[\s]',lists[i])
+    i += 1
+    now = time.localtime()
 
-flag = True
+    file = open("/usr/script/chkPass/log/md5_%s_%04d-%02d-%02d.log"%(chkList[0], now.tm_year, now.tm_mon, now.tm_mday),'r')
+    lines = file.readlines()
+    file.close()
 
-cnt = len(lines)
+    flag = True
 
-offset = 1
-if cnt < offset:
-    offset = cnt
+    cnt = len(lines)
 
-for i in range(cnt-offset, cnt):
-    if lines[i] != lines[cnt-1]:
-        flag = False
+    offset = 1
+    if cnt < offset:
+        offset = cnt
+
+    for i in range(cnt-offset, cnt):
+        if lines[i] != lines[cnt-1]:
+            flag = False
 
 #if flag == False:
 #    execfile("",{})
