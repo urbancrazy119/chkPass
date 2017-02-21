@@ -1,5 +1,5 @@
 # To Add List for checking
-1. You have to add a list for checking.
+1. You have to add a list for checking in chklist.txt.
 2. Form : CompanyName	SiteAddress	TelegramName(Need to dialog List)	TelegramName	...
 3. You can add receiver infinitely
 
