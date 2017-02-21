@@ -31,6 +31,6 @@ while i < cnt:
         print >> file, m.hexdigest()
         file.close()
 
-#execfile("/usr/script/chkPass/check.py",{})
+execfile("/usr/script/chkPass/check.py",{})
 
     

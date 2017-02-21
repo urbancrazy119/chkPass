@@ -1,11 +1,12 @@
+#-*- coding: utf-8 -*-
 import time
 import re
 import getList
+import sendMsg
 
 # get check List
 lists = getList.getList()
 lists_cnt = len(lists)
-print lists_cnt
 i = 0
 
 while i < lists_cnt:
@@ -21,13 +22,13 @@ while i < lists_cnt:
 
     cnt = len(lines)
 
-    offset = 1
+    offset = 2 
     if cnt < offset:
         offset = cnt
 
-    for i in range(cnt-offset, cnt):
-        if lines[i] != lines[cnt-1]:
+    for j in range(cnt-offset, cnt):
+        if lines[j] != lines[cnt-1]:
             flag = False
-
-#if flag == False:
-#    execfile("",{})
+    if flag == False:
+#       sendMsg.send_msg_to_telegram('창연_백','['+chkList[0]+'] 변화 감지 : \t'+chkList[1])
+        sendMsg.send_msg_to_telegram(chkList[2],'['+chkList[0]+'] 변화 감지 : \t'+chkList[1])
