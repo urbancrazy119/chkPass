@@ -1,0 +1,6 @@
+# .gitignore by bcy
+/log/*.log
+telegram-cli
+tg-server.pub
+*.pyc
+
