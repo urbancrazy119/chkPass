@@ -22,13 +22,18 @@ while i < lists_cnt:
 
     cnt = len(lines)
 
+    # set compare res
     offset = 2 
     if cnt < offset:
         offset = cnt
 
+    # compare hash value
     for j in range(cnt-offset, cnt):
         if lines[j] != lines[cnt-1]:
             flag = False
+
+    # if unmatch
     if flag == False:
-#       sendMsg.send_msg_to_telegram('창연_백','['+chkList[0]+'] 변화 감지 : \t'+chkList[1])
-        sendMsg.send_msg_to_telegram(chkList[2],'['+chkList[0]+'] 변화 감지 : \t'+chkList[1])
+        # send msg
+        for z in range(2, len(chkList)):
+            sendMsg.send_msg_to_telegram(chkList[z],'['+chkList[0]+'] 변화 감지 : \t'+chkList[1])

@@ -1,2 +1,2 @@
-komipo	https://komipo.saramin.co.kr/service/komipo/640/applicant/pass/pass_confirm.asp	창연_백
+komipo	https://komipo.saramin.co.kr/service/komipo/640/applicant/pass/pass_confirm.asp	창연_백	현정
 namdong	http://koenergy.incruit.com/	창연_백
